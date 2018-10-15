@@ -184,14 +184,12 @@ th {
 @font-face {
   font-family: "Exo 2";
   font-weight: normal;
-  font-style: thin;
   font-display: swap;
   src: url("../fonts/Exo20-thin.woff2") format("Exo20-thin.woff2"), url("../fonts/Exo20-thin.woff") format("woff");
 }
 body {
-  font-family: "Exo 2", "Arial", sans-serif;
+  font-family: "Trebuchet MS", "Arial", sans-serif;
   color: #ffffff;
-  line-height: 26px;
   background-image: url("../img/background.png");
 }
 html {
@@ -209,9 +207,55 @@ html {
   padding: 0 15px;
 }
 .section__inner {
-  max-width: 1170px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 .catalog__title {
+  font-family: "Exo 2";
+  font-size: 36px;
   font-weight: 100;
+  text-align: center;
+}
+.catalog__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.catalog__item {
+  width: calc(33.33% - 40px);
+  outline: 1px solid #ffffff;
+}
+.catalog__text-wrapper {
+  width: 100%;
+  height: 480px;
+  background-color: #ffffff;
+  background-image: url("../img/cat.png");
+  overflow: hidden;
+}
+.catalog__header {
+  font-size: 16px;
+  color: #666666;
+  font-weight: normal;
+}
+.catalog__name {
+  font-size: 24px;
+  color: #000000;
+  font-weight: bold;
+}
+.catalog__big {
+  font-size: 48px;
+}
+.catalog__description {
+  font-size: 14px;
+  line-height: 16px;
+  color: #666666;
+}
+.catalog__text {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: bold;
+  text-align: center;
 }
