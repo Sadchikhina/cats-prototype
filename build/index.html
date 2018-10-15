@@ -3,54 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="css/style.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <meta name="description" content="">
   </head>
   <body>
     <main class="page-main">
-      <section class="section form">
-        <h1 class="form__title visually-hidden">Выбор явства</h1>
-        <div class="section__inner form__wrapper">
-          <form class="catalog" action="#" method="get">
-            <div class="catalog__form dish-form">
-              <label class="dish-form__label">Ты сегодня покормил кота?</label>
-              <div class="dish-form__wrapper">
-                <p class="dish-form__input dish-form__input--foie-gras" tabindex="0">
-                  </p><p class="dish-form__title">Сказочное заморское явство</p>
-                  <label class="dish-form__input-label" for="foie-gras"><span class="dish-form__big">Нямушка</span> с фуа-гра</label>
-                  <input class="dish-form__field" type="checkbox" id="foie-gras" name="foie-gras" value="Нямушка с фуа-гра">
-                  <p class="dish-form__description">10 порций</p>
-                  <p class="dish-form__description">мышь в подарок</p>
-                  <p class="dish-form__kilo"><span class="dish-form__bold">0,5</span> кг</p>
-                <p></p>
-                <p class="dish-form__text">Чего сидишь? Порадуй котэ, <button class="dish-form__button" type="button">купи</button></p>
-              </div>
-              <div class="dish-form__wrapper">
-                <p class="dish-form__input dish-form__input--fish" tabindex="0">
-                  </p><p class="dish-form__title">Сказочное заморское явство</p>
-                  <label class="dish-form__input-label" for="fish"><span class="dish-form__big">Нямушка</span> с рыбой</label>
-                  <input class="dish-form__field" type="checkbox" id="fish" name="fish" value="Нямушка с рыбой">
-                  <p class="dish-form__description">40 порций</p>
-                  <p class="dish-form__description">2 мыши в подарок</p>
-                  <p class="dish-form__kilo"><span class="dish-form__bold">2</span> кг</p>
-                <p></p>
-                <p class="dish-form__text">Головы щучьи с чесноком да свежайшая сёмгушка</p>
-              </div>
-              <div class="dish-form__wrapper">
-                <p class="dish-form__input dish-form__input--chicken" tabindex="0">
-                  </p><p class="dish-form__title">Сказочное заморское явство</p>
-                  <label class="dish-form__input-label" for="chicken"><span class="dish-form__big">Нямушка</span> с курой</label>
-                  <input class="dish-form__field" type="checkbox" id="chicken" name="chicken" value="Нямушка с курой">
-                  <p class="dish-form__description">100 порций</p>
-                  <p class="dish-form__description">5 мышей в подарок</p>
-                  <p class="dish-form__description">заказчик</p>
-                  <p class="dish-form__kilo"><span class="dish-form__bold">5</span> кг</p>
-                <p></p>
-                <p class="dish-form__text dish-form__text--unavailable">Печалька, с курой закончился</p>
-              </div>
+      <section class="section catalog">
+        <h1 class="catalog__title">Ты сегодня покормил кота?</h1>
+        <div class="section__inner catalog__wrapper">
+          <div class="catalog__item catalog__item--foie-gras">
+            <div class="catalog__text-wrapper">
+              <h2 class="catalog__header">Сказочное заморское явство</h2>
+              <label class="catalog__name catalog__name--foie-gras"><span class="catalog__big">Нямушка</span> с фуа-гра</label>
+              <p class="catalog__description">10 порций</p>
+              <p class="catalog__description">мышь в подарок</p>
+              <p class="catalog__kilo"><span class="catalog__bold">0,5</span> кг</p>
             </div>
-          </form>
+            <p class="catalog__text">Чего сидишь? Порадуй котэ, <button class="catalog__button" type="button">купи</button></p>
+          </div>
+          <div class="catalog__item catalog__item--fish">
+            <div class="catalog__text-wrapper">
+              <h2 class="catalog__header">Сказочное заморское явство</h2>
+              <label class="catalog__name"><span class="catalog__big">Нямушка</span> с рыбой</label>
+              <p class="catalog__description">40 порций</p>
+              <p class="catalog__description">2 мыши в подарок</p>
+              <p class="catalog__kilo"><span class="catalog__bold">2</span> кг</p>
+            </div>
+            <p class="dish-form__text">Головы щучьи с чесноком да свежайшая сёмгушка</p>
+          </div>
+          <div class="catalog__item catalog__item--chicken catalog__item--unavailable">
+            <div class="catalog__text-wrapper">
+              <h2 class="catalog__header">Сказочное заморское явство</h2>
+              <label class="catalog__name"><span class="catalog__big">Нямушка</span> с курой</label>
+              <p class="catalog__description">100 порций</p>
+              <p class="catalog__description">5 мышей в подарок</p>
+              <p class="catalog__description">заказчик доволен</p>
+              <p class="catalog__kilo"><span class="catalog__bold">5</span> кг</p>
+            </div>
+            <p class="dish-form__text--unavailable">Печалька, с курой закончился</p>
+          </div>
         </div>
       </section>
     </main>
