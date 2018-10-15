@@ -11,19 +11,83 @@
 }
 
 .catalog__item {
-  width: ~"calc(33.33% - 40px)";
-  outline: 1px solid @white;
+  width: ~"calc(33.33% - 49px)";
 }
 
-.catalog__text-wrapper {
+.catalog__inner-wrapper {
+  position: relative;
   width: 100%;
   height: 480px;
   background-color: @white;
   background-image: url("../img/cat.png");
+  background-repeat: no-repeat;
+  background-position: -28px 202px;
   overflow: hidden;
+  border-radius: 8px;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 9%);
+
+  &--foie-gras {
+    border: 4px solid @blue;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 456px;
+      left: -11px;
+      width: 75px;
+      height: 5px;
+      background-color: @blue;
+      transform: rotate(-42deg);
+    }
+  }
+
+  &--fish {
+    border: 4px solid @rose;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 456px;
+      left: -11px;
+      width: 75px;
+      height: 5px;
+      background-color: @rose;
+      transform: rotate(-42deg);
+    }
+  }
+
+  &--unavailable {
+    border: 4px solid @grey-light;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 456px;
+      left: -11px;
+      width: 75px;
+      height: 5px;
+      background-color: @grey-light;
+      transform: rotate(-42deg);
+    }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 9%);
+  }
+}
+
+.catalog__text-wrapper {
+  padding-left: 42px;
 }
 
 .catalog__header {
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 5px;
   font-size: 16px;
   color: @grey;
   font-weight: normal;
@@ -33,6 +97,8 @@
   font-size: 24px;
   color: @black;
   font-weight: bold;
+  margin: 0;
+  margin-bottom: 13px;
 }
 
 .catalog__big {
@@ -43,6 +109,7 @@
   font-size: 14px;
   line-height: 16px;
   color: @grey;
+  margin: 0;
 }
 
 .catalog__text {
@@ -50,4 +117,41 @@
   line-height: 16px;
   font-weight: bold;
   text-align: center;
+}
+
+.catalog__button {
+  color: @blue;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.catalog__kilo {
+  position: absolute;
+  bottom: -9px;
+  right: 15px;
+  font-size: 21px;
+  line-height: 22px;
+  text-align: center;
+  width: 81px;
+  height: 81px;
+  padding-top: 20px;
+  border-radius: 100%;
+
+  &--foie-gras {
+    background-color: @blue;
+  }
+
+  &--fish {
+    background-color: @rose;
+  }
+
+  &--unavailable {
+    background-color: @grey-light;
+  }
+}
+
+.catalog__bold {
+  font-size: 42px;
+  line-height: 22px;
 }
