@@ -1,3 +1,9 @@
+.catalog {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 25%);
+}
+
 .catalog__title {
   font-family: "Exo 2";
   font-size: 36px;
@@ -117,13 +123,18 @@
   line-height: 16px;
   font-weight: bold;
   text-align: center;
+
+  &--unavailable {
+    color: @yellow;
+  }
 }
 
 .catalog__button {
   color: @blue;
   background-color: transparent;
   border: none;
-  text-decoration: underline;
+  border-bottom: 1px dashed @blue;
+  padding: 0;
 }
 
 .catalog__kilo {
@@ -154,4 +165,21 @@
 .catalog__bold {
   font-size: 42px;
   line-height: 22px;
+}
+
+@media (max-width: 1065px) {
+  .catalog__item {
+    width: ~"calc(35% - 45px)";
+  }
+}
+
+@media (max-width: 1045px) {
+  .catalog__wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .catalog__item {
+    margin-right: 60px;
+  }
 }

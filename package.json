@@ -1,8 +1,8 @@
 {
-  "name": "sedona",
+  "name": "cats-prototype",
   "version": "14.0.0",
   "private": true,
-  "description": "Личный проект «Седона» от HTML Academy",
+  "description": "cats-prototype",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "8.3.x",
@@ -19,6 +19,7 @@
     "gulp-rename": "^1.2.2",
     "gulp-svgstore": "^6.1.1",
     "gulp-webp": "^3.0.0",
+    "postcss-clip-path-polyfill": "^1.0.4",
     "posthtml-include": "^1.1.0",
     "run-sequence": "^2.2.1",
     "stylelint": "9.2.x",
