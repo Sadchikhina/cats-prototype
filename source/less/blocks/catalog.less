@@ -64,7 +64,7 @@
       background-color: @rose;
     }
 
-    .catalog__kilo {
+    .catalog__kilo:not(.catalog__kilo--unavailable) {
       background-color: @rose;
     }
   }
@@ -76,6 +76,22 @@
       background-color: @grey-light;
     }
   }
+}
+
+.catalog__inner-wrapper--selected:hover .catalog__header {
+  display: none;
+}
+
+.catalog__inner-wrapper--selected:hover .catalog__header--selected {
+  display: block;
+}
+
+.catalog__inner-wrapper--unavailable:hover .catalog__header {
+  display: block;
+}
+
+.catalog__inner-wrapper--unavailable:hover .catalog__header--selected {
+  display: none;
 }
 
 .catalog__text-wrapper {
@@ -105,7 +121,7 @@
   font-weight: normal;
 
   &--selected {
-    font-size: 1px;
+    font-size: 16px;
     color: @rose;
     display: none;
   }
@@ -136,7 +152,12 @@
   font-weight: bold;
   text-align: center;
 
+  &--selected {
+    display: none;
+  }
+
   &--unavailable {
+    display: none;
     color: @yellow;
   }
 }

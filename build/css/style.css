@@ -285,7 +285,7 @@ html {
 .catalog__inner-wrapper--selected::after {
   background-color: #d91667;
 }
-.catalog__inner-wrapper--selected .catalog__kilo {
+.catalog__inner-wrapper--selected .catalog__kilo:not(.catalog__kilo--unavailable) {
   background-color: #d91667;
 }
 .catalog__inner-wrapper--unavailable {
@@ -293,6 +293,18 @@ html {
 }
 .catalog__inner-wrapper--unavailable::after {
   background-color: #b3b3b3;
+}
+.catalog__inner-wrapper--selected:hover .catalog__header {
+  display: none;
+}
+.catalog__inner-wrapper--selected:hover .catalog__header--selected {
+  display: block;
+}
+.catalog__inner-wrapper--unavailable:hover .catalog__header {
+  display: block;
+}
+.catalog__inner-wrapper--unavailable:hover .catalog__header--selected {
+  display: none;
 }
 .catalog__text-wrapper {
   position: relative;
@@ -317,7 +329,7 @@ html {
   font-weight: normal;
 }
 .catalog__header--selected {
-  font-size: 1px;
+  font-size: 16px;
   color: #d91667;
   display: none;
 }
@@ -343,7 +355,11 @@ html {
   font-weight: bold;
   text-align: center;
 }
+.catalog__text--selected {
+  display: none;
+}
 .catalog__text--unavailable {
+  display: none;
   color: #ffff66;
 }
 .catalog__button {
